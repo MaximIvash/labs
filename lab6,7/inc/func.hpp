@@ -5,6 +5,8 @@ using namespace std;
 
 namespace mi
 {
+	bool comp(vector<int> a, vector<int> b);
+
 	int sumOfDigits(int num);
 
 	vector<int> maxAndMinNumber(vector<vector<int>>& matrix);

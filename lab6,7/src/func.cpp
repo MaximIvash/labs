@@ -7,6 +7,21 @@ using namespace std;
 
 namespace mi
 {
+    bool comp(vector<int> a, vector<int> b)
+    {
+        int sum_a = 0;
+        int sum_b = 0;
+        for (int i = 0; i < a.size(); i++)
+        {
+            sum_a = a[i];
+        }
+        for (int i = 0; i < b.size(); i++)
+        {
+            sum_b = b[i];
+        }
+        return a < b;
+    }
+
     vector<int> maxAndMinNumber(vector<vector<int>>& matrix)
     {
         vector<int> ret(2);

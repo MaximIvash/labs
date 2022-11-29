@@ -8,21 +8,6 @@
 
 using namespace std;
 
-bool comp(vector<int> a, vector<int> b) 
-{
-	int sum_a = 0;
-	int sum_b = 0;
-	for (int i = 0; i < a.size(); i++) 
-	{
-		sum_a = a[i];
-	}
-	for (int i = 0; i < b.size(); i++) 
-	{
-		sum_b = b[i];
-	}
-	return a < b;
-}
-
 int main() 
 {
 	ifstream in("input.txt", ios::in);
@@ -46,7 +31,7 @@ int main()
 	maxMin = mi::maxAndMinNumber(matrix);
 	if (mi::sumOfDigits(maxMin[0]) == mi::sumOfDigits(maxMin[1])) 
 	{
-		sort(matrix.begin(), matrix.end(), comp);
+		sort(matrix.begin(), matrix.end(), mi::comp);
 	}
 
 	for (int i = 0; i < numi; i++) 

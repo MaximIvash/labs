@@ -11,11 +11,11 @@ namespace mi
     {
         int sum_a = 0;
         int sum_b = 0;
-        for (int i = 0; i < a.size(); i++)
+        for (int i = 0; i < size(a); i++)
         {
             sum_a = a[i];
         }
-        for (int i = 0; i < b.size(); i++)
+        for (int i = 0; i < size(b); i++)
         {
             sum_b = b[i];
         }
@@ -27,9 +27,9 @@ namespace mi
         vector<int> ret(2);
         int max = INT_MIN;
         int min = INT_MAX;
-        for (int i = 0; i < matrix.size(); i++) 
+        for (int i = 0; i < size(matrix); i++)
         {
-            for (int j = 0; j < matrix[0].size(); j++) 
+            for (int j = 0; j < size(matrix[0]); j++)
             {
                 if (max < matrix[i][j])
                     max = matrix[i][j];
@@ -46,14 +46,15 @@ namespace mi
     int sumOfDigits(int num)
     {
         int summ = 0;
-        while (num > 0) {
+        while (num > 0) 
+        {
             summ += num % 10;
             num /=  10;
         }
         return summ;
     }
 
-    void readFromFile(vector<vector<int>>& matrix) 
+    void readFromFile(vector<vector<int>>& matrix)
     {
 
         ifstream in("input.txt", ios::in);
@@ -76,9 +77,9 @@ namespace mi
     {
         ofstream out("output.txt", ios::out);
 
-        for (int i = 0; i < matrix.size(); i++) 
+        for (int i = 0; i < size(matrix); i++)
         {
-            for (int j = 0; j < matrix[0].size(); j++) 
+            for (int j = 0; j < size(matrix[0]); j++)
             {
                 out << matrix[i][j] << " ";
             }
@@ -89,7 +90,7 @@ namespace mi
 
     void cout_vector(vector<int> vec) 
     {
-        for (int i = 0; i < vec.size(); i++) 
+        for (int i = 0; i < size(vec); i++)
         {
             cout << vec[i] << " ";
         }

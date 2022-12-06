@@ -31,7 +31,7 @@ int main()
 	maxMin = mi::maxAndMinNumber(matrix);
 	if (mi::sumOfDigits(maxMin[0]) == mi::sumOfDigits(maxMin[1])) 
 	{
-		sort(matrix.begin(), matrix.end(), mi::comp);
+		sort(begin(matrix), end(matrix), mi::comp);
 	}
 
 	for (int i = 0; i < numi; i++) 

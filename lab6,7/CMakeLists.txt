@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.15) # Проверка версии CMake.
 									 # Если версия установленой программы
 									 # старее указаной, произайдёт аварийный выход.
 
-set(PROJECT_NAME lab6)				 # задать константу с именем проекта		 
+set(PROJECT_NAME test)				 # задать константу с именем проекта		 
 project("${PROJECT_NAME}")			 # имя проекта	
 
 
@@ -16,5 +16,5 @@ add_executable("${PROJECT_NAME}" lab6_1.cpp
 								 inc/func.hpp
 								 src/func.cpp)	# добавить исполняемый файл
 								 
-file(COPY input.txt DESTINATION "/")	# скопировать файл text.txt в корневую папку проекта
+file(COPY input.txt DESTINATION "/")	# скопировать файлы .txt в корневую папку проекта
 file(COPY output.txt DESTINATION "/")

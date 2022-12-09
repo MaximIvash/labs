@@ -7,7 +7,7 @@ using namespace std;
 
 namespace mi
 {
-    bool comp(vector<int> a, vector<int> b)
+    bool comp(vector<int> a, vector<int> b) // условия сортировки
     {
         int sum_a = 0;
         int sum_b = 0;
@@ -22,7 +22,7 @@ namespace mi
         return a < b;
     }
 
-    vector<int> maxAndMinNumber(vector<vector<int>>& matrix)
+    vector<int> maxAndMinNumber(vector<vector<int>>& matrix) 
     {
         vector<int> ret(2);
         int max = INT_MIN;
@@ -43,7 +43,7 @@ namespace mi
         return ret;
     }
 
-    int sumOfDigits(int num)
+    int sumOfDigits(int num) 
     {
         int summ = 0;
         while (num > 0) 
@@ -54,7 +54,7 @@ namespace mi
         return summ;
     }
 
-    void readFromFile(vector<vector<int>>& matrix)
+    void readFromFile(vector<vector<int>>& matrix) 
     {
 
         ifstream in("input.txt", ios::in);
